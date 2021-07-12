@@ -1,1 +1,8 @@
 https://medium.com/@ivorobioff/5-easy-steps-to-build-your-own-php-framework-cb4ba72dc5a6
+
+
+https://packagist.org/packages/psr/container
+
+https://packagist.org/packages/symfony/dependency-injection
+
+https://symfony.com/doc/current/components/dependency_injection.html
