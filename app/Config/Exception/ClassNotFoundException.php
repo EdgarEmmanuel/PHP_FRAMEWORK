@@ -11,7 +11,7 @@ class ClassNotFoundException extends \Exception{
         $this->errorController = new ErrorController();
     }
 
-    public function showErrorMethod(){
+    public function showErrorMethod($functionName){
         return $this->errorController->error();
     }
 

@@ -120,7 +120,7 @@ class Router {
                     if(! method_exists($controllerInstance,$functionName)) throw new ClassNotFoundException();
                     return $controllerInstance->{$functionName}();
                 }catch(ClassNotFoundException $error){
-                    return $error->showErrorMethod();
+                    return $error->showErrorMethod($functionName);
                 }
             } else {
                 throw new ClassNotFoundException();
