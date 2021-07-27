@@ -4,11 +4,16 @@ namespace App\Routes;
 
 use App\Controllers\{HomeController,ErrorController};
 use App\Config\Exception\ClassNotFoundException;
+use App\Config\Container\Container;
 
 
 class Router {
 
     private $controllerNamespace = "App\\Controllers\\";
+
+    public function __construct(Container $container){
+        $this->container = $container->boot();
+    }
 
     public function get($path,$controllerAndMethod){
         $this->routes['get'][$path] = $controllerAndMethod;
@@ -106,6 +111,27 @@ class Router {
     public function RouteFound($routeInformations){
         $handlerInformations = $routeInformations[1];
         $routeVariables = $routeInformations[2];
+        if(!is_array($handlerInformations)){
+            $this->whenTheHandlerIsNotArray($routeInformations);
+        } else {
+            $this->whenTheHandlerIsArray($routeInformations);
+        }
+    }
+
+
+    public function whenTheHandlerIsArray($routeInformations) {
+        $handlerInformations = $routeInformations[1];
+        $routeVariables = $routeInformations[2];
+        $controller = $handlerInformations[0];
+        $function = $handlerInformations[1];
+
+        $this->container->call($handlerInformations,$routeVariables);
+    }
+
+
+    public function whenTheHandlerIsNotArray($routeInformations){
+        $handlerInformations = $routeInformations[1];
+        $routeVariables = $routeInformations[2];
 
         $parameters_arguments = explode("@",$handlerInformations);
 
@@ -128,6 +154,7 @@ class Router {
         } catch (ClassNotFoundException $error){
             return $error->showErrorController($controllerName);
         }
+
     }
 
 }

@@ -11,7 +11,7 @@ class Routes {
     private static $routes = [
         ["method" => "GET","url" => "/","controllerHandler" => "HomeController@home"],
         ["GET","/user/{id:\d+}","get_user_handler"],
-        ['GET', '/articles/{id:\d+}[/{title}]', 'get_article_handler']
+        ['GET', '/articles', ['App\Controllers\HomeController', 'show']]
     ];
 
     public static function routes (){
