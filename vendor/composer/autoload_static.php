@@ -34,6 +34,7 @@ class ComposerStaticInit83b2ee42317b71110f7647506bd82e8b
         ),
         'L' => 
         array (
+            'League\\Plates\\' => 14,
             'Laminas\\ZendFrameworkBridge\\' => 28,
             'Laminas\\Diactoros\\' => 18,
         ),
@@ -52,6 +53,10 @@ class ComposerStaticInit83b2ee42317b71110f7647506bd82e8b
         array (
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
             1 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'League\\Plates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/plates/src',
         ),
         'Laminas\\ZendFrameworkBridge\\' => 
         array (

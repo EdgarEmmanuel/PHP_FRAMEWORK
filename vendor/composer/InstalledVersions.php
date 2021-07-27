@@ -24,12 +24,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'ac9d733e67a38cbc730ce6478dde57b24a9f87d5',
     'name' => 'root/my_php_framework',
   ),
   'versions' => 
@@ -51,6 +51,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '13af2502d9bb6f7d33be2de4b51fb68c6cdb476e',
+    ),
+    'league/plates' => 
+    array (
+      'pretty_version' => 'v3.4.0',
+      'version' => '3.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6d3ee31199b536a4e003b34a356ca20f6f75496a',
     ),
     'nikic/fast-route' => 
     array (
@@ -95,12 +104,12 @@ private static $installed = array (
     ),
     'root/my_php_framework' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'ac9d733e67a38cbc730ce6478dde57b24a9f87d5',
     ),
     'zendframework/zend-diactoros' => 
     array (
