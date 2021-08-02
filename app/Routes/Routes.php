@@ -9,18 +9,17 @@ use FastRoute\{RouteCollector};
 class Routes {
 
     private static $routes = [
-        ["method" => "GET","url" => "/","controllerHandler" => "HomeController@home"],
-        ["GET","/user/{id:\d+}","get_user_handler"],
-        ['GET', '/articles', ['App\Controllers\HomeController', 'show']]
+        ["GET","/",['App\Controllers\HomeController', 'home']],
+        ['GET', '/articles/{name}/{id}', ['App\Controllers\HomeController', 'show']]
     ];
 
     public static function routes (){
         $dispatcher = simpleDispatcher(function(RouteCollector $r) {
             foreach(self::$routes as $route){
                 $r -> addRoute(
-                    $route["method"] ?? $route[0],
-                    $route["url"] ?? $route[1],
-                    $route["controllerHandler"] ?? $route[2]
+                    $route[0],
+                    $route[1],
+                    $route[2]
                 );
             }
         });

@@ -109,13 +109,7 @@ class Router {
     }
 
     public function RouteFound($routeInformations){
-        $handlerInformations = $routeInformations[1];
-        $routeVariables = $routeInformations[2];
-        if(!is_array($handlerInformations)){
-            $this->whenTheHandlerIsNotArray($routeInformations);
-        } else {
-            $this->whenTheHandlerIsArray($routeInformations);
-        }
+        $this->whenTheHandlerIsArray($routeInformations);
     }
 
 
@@ -126,35 +120,6 @@ class Router {
         $function = $handlerInformations[1];
 
         $this->container->call($handlerInformations,$routeVariables);
-    }
-
-
-    public function whenTheHandlerIsNotArray($routeInformations){
-        $handlerInformations = $routeInformations[1];
-        $routeVariables = $routeInformations[2];
-
-        $parameters_arguments = explode("@",$handlerInformations);
-
-        $controllerName = $parameters_arguments[0];
-        $controllerFullPath = $this->controllerNamespace.$controllerName;
-        $functionName = $parameters_arguments[1];
-
-        try{
-            if(class_exists($controllerFullPath)){
-                try{
-                    $controllerInstance = new $controllerFullPath();
-                    if(! method_exists($controllerInstance,$functionName)) throw new ClassNotFoundException();
-                    return $controllerInstance->{$functionName}();
-                }catch(ClassNotFoundException $error){
-                    return $error->showErrorMethod($functionName);
-                }
-            } else {
-                throw new ClassNotFoundException();
-            }
-        } catch (ClassNotFoundException $error){
-            return $error->showErrorController($controllerName);
-        }
-
     }
 
 }
