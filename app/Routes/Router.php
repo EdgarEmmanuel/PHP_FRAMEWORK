@@ -68,6 +68,7 @@ class Router {
 
     public function RouteWithMethodNotAllowed($routeInformations){
         $allowedMethods = $routeInformations[1];
+        echo "Alowed method error in the Router.php";
         var_dump($allowedMethods);
     }
 
