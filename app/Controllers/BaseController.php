@@ -16,7 +16,7 @@ class BaseController{
 
     public function __construct(){
         
-        $this->templates = new Engine(SRC_VIEWS."/templates");
+        $this->templates = new Engine(SRC_VIEWS."templates");
         $this->templates->loadExtension(new Asset(SRC_ASSETS));
     }
 }

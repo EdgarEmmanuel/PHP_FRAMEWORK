@@ -45,7 +45,7 @@ class Router {
 
         switch ($routeInformations[0]) {
             case \FastRoute\Dispatcher::NOT_FOUND:
-                $this->RouteNotFound($this->httpRequestHandler->getHttpRequestPath());
+                $this->RouteNotFound();
                 break;
             case \FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
                 $this->RouteWithMethodNotAllowed($routeInformations);
@@ -62,8 +62,9 @@ class Router {
     }
 
 
-    public function RouteNotFound($uri){
-        $this->errorController->functionPageNotFound($uri);
+    public function RouteNotFound(){
+        $notFoundUrl =  $this->httpRequestHandler->getHttpRequestPath();
+        $this->errorController->functionPageNotFound($notFoundUrl);
     }
 
     public function RouteWithMethodNotAllowed($routeInformations){

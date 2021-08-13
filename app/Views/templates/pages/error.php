@@ -1,5 +1,18 @@
 <?php $this->layout('layouts/error') ?>
 
-<h1>Erreur</h1>
-<p>Hello, <?=$this->e($url)?></p>
+
+
+<div class="error">
+    <div class="right">
+        <h1>Error</h1>
+        <p>
+            URL <b> <?=$this->e($url)?> </b> Not Found.<br/>
+            See the Route Declaration file 
+        </p>
+    </div>
+    <div class="left">
+        <img src="https://images.all-free-download.com/images/graphicthumb/desert_landscape_drawing_colored_cartoon_design_cactus_icons_6831899.jpg" alt="" />
+    </div>
+
+</div>
 
