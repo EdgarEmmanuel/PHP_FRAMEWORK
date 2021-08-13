@@ -12,7 +12,6 @@ class App{
     public function __construct(){
         $this->container = new Container();
         $this->router = new Router($this->container);
-        
     }
 
     public function run(){

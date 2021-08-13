@@ -3,13 +3,11 @@
 namespace App\Routes;
 
 use App\Controllers\{HomeController,ErrorController};
-use App\Config\Exception\ClassNotFoundException;
 use App\Config\Container\Container;
 
 
 class Router {
 
-    private $controllerNamespace = "App\\Controllers\\";
     private $httpRequestHandler;
     private $errorController ;
 
@@ -34,7 +32,7 @@ class Router {
         $httpMethod =  $this->httpRequestHandler->getHttpRequestMethod();
         $uri =  $this->httpRequestHandler->getHttpRequestPath();
 
-        $routeInformations = Routes::routes()->dispatch($httpMethod, $uri);
+        $routeInformations = RoutesFactory::routes()->dispatch($httpMethod, $uri);
 
         $this->verifyRoutesIntegrity($routeInformations);
         
@@ -57,10 +55,6 @@ class Router {
 
     }
 
-    public function get_length(){
-        return count($_GET);
-    }
-
 
     public function RouteNotFound(){
         $notFoundUrl =  $this->httpRequestHandler->getHttpRequestPath();
@@ -69,7 +63,7 @@ class Router {
 
     public function RouteWithMethodNotAllowed($routeInformations){
         $allowedMethods = $routeInformations[1];
-        echo "Alowed method error in the Router.php";
+        echo "Alowed method error in the Router.php file ";
         var_dump($allowedMethods);
     }
 
@@ -81,7 +75,6 @@ class Router {
     public function whenTheHandlerIsArray($routeInformations) {
         $handlerInformations = $routeInformations[1];
         $routeVariables = $routeInformations[2];
-
         $this->container->call($handlerInformations,$routeVariables);
     }
 

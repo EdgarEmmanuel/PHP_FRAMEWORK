@@ -6,12 +6,9 @@ namespace App\Routes;
 use function FastRoute\{simpleDispatcher};
 use FastRoute\{RouteCollector};
 
-class Routes {
+class RoutesFactory {
 
-    private static $routes = [
-        ["GET","/",['App\Controllers\HomeController', 'home']],
-        ['GET', '/articles/{name}/{id}', ['App\Controllers\HomeController', 'show']]
-    ];
+    private static $routes = Web::ROUTES;
 
     public static function routes (){
         $dispatcher = simpleDispatcher(function(RouteCollector $r) {
