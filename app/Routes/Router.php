@@ -68,14 +68,23 @@ class Router {
     }
 
     public function RouteFound($routeInformations){
+        $this->isTheCallableExists($routeInformations);
         $this->whenTheHandlerIsArray($routeInformations);
     }
 
 
-    public function whenTheHandlerIsArray($routeInformations) {
+    private function whenTheHandlerIsArray($routeInformations) {
         $handlerInformations = $routeInformations[1];
         $routeVariables = $routeInformations[2];
         $this->container->call($handlerInformations,$routeVariables);
+    }
+
+    private function isTheCallableExists($routeInformations){
+        $theCallableController = $routeInformations[1][0];
+        $theCallableFunction = $routeInformations[1][1];
+        var_dump(class_exists($theCallableController));
+        var_dump(method_exists($theCallableController,$theCallableFunction));
+        die;
     }
 
 }
