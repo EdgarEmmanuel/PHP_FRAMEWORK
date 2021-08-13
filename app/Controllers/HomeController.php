@@ -11,7 +11,6 @@ class HomeController extends BaseController {
 
     public function show($name){
         $view = $this->templates->render("index", ['name' => $name]);
-        //var_dump($view[0]);
         echo $view;
     }
 

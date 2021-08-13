@@ -58,7 +58,7 @@ class Router {
 
     public function RouteNotFound(){
         $notFoundUrl =  $this->httpRequestHandler->getHttpRequestPath();
-        $this->errorController->functionPageNotFound($notFoundUrl);
+        $this->errorController->PageNotFound($notFoundUrl);
     }
 
     public function RouteWithMethodNotAllowed($routeInformations){
@@ -82,9 +82,20 @@ class Router {
     private function isTheCallableExists($routeInformations){
         $theCallableController = $routeInformations[1][0];
         $theCallableFunction = $routeInformations[1][1];
-        var_dump(class_exists($theCallableController));
-        var_dump(method_exists($theCallableController,$theCallableFunction));
-        die;
+
+        $controllerExists = class_exists($theCallableController);
+        $methodExists = method_exists($theCallableController,$theCallableFunction);
+
+        if(!$controllerExists){
+            $this->errorController->controllerOrMethodNotFound($theCallableController);
+            exit;
+        }
+        
+        if(!$methodExists){
+            $this->errorController->controllerOrMethodNotFound($theCallableFunction, true);
+            exit;
+        }
+    
     }
 
 }

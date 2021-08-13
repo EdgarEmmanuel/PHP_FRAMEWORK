@@ -6,8 +6,7 @@
     <div class="right">
         <h1>Error</h1>
         <p>
-            URL <b> <?=$this->e($url)?> </b> Not Found.<br/>
-            See the Route Declaration file 
+            <?=$this->e($message)?>
         </p>
     </div>
     <div class="left">
