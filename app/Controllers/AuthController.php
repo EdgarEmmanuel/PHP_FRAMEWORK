@@ -11,8 +11,11 @@ class AuthController extends BaseController {
 
 
     public function login(){
-        var_dump($this->request->getParsedBody());
-        // die;
+        $body = $this->request->getParsedBody();
+        $username = $body["username"];
+        $password = $body["password"];
+        var_dump(" email : ".$username);
+        var_dump("password : {$password}");
         //var_dump($body);
         die;
     }

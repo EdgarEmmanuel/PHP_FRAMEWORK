@@ -12,11 +12,11 @@
         <h2>Login</h2>
         <form action="index.php?page=login" method="post">
             <div class="inputBox">
-                <input type="text" name="username" required="">
+                <input type="text" name="username" required>
                 <label for="">Username</label>
             </div>
             <div class="inputBox">
-                <input type="password" name="password" required="">
+                <input type="password" name="password" required>
                 <label for="">Password</label>
             </div>
           <a href="/login3/bes.html"><input type="submit" name="" id="" value="Submit"></a>
