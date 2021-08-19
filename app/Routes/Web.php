@@ -17,7 +17,10 @@ abstract class Web {
 
     const ROUTES = [
         ["GET","/",['App\Controllers\HomeController', 'home']],
-        ['GET', '/articles/{name}/{id}', ['App\Controllers\HomeController', 'show']]
+        ['GET', '/articles/{name}/{id}', ['App\Controllers\HomeController', 'show']],
+
+        ['GET', 'login', ['App\Controllers\AuthController', 'home']],
+        ['POST', 'login', ['App\Controllers\AuthController', 'login']]
     ];
 
 }

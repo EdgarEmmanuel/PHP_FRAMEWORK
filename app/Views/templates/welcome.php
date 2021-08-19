@@ -25,7 +25,7 @@
                     <a href="#" class="nav-link js-anchor-link">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contactus" class="nav-link js-anchor-link">Contact</a>
+                    <a href="index.php?page=login" class="nav-link js-anchor-link">login</a>
                 </li>
             </ul>
             <div class="hamburger">

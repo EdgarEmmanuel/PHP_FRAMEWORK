@@ -2,15 +2,14 @@
 
 namespace App\Routes;
 use Laminas\Diactoros\ServerRequestFactory;
-use Laminas\Diactoros\ServerRequest;
 
 class HttpRequestHandler{
 
-    private $request ;
 
     /**
      * https://docs.laminas.dev/laminas-diactoros/v2/usage/
      */
+    private $request ;
 
 
     public function __construct(){
