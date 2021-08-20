@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\Interfaces\IUser;
 
 class AuthController extends BaseController {
@@ -12,15 +13,15 @@ class AuthController extends BaseController {
         $this->userInterface = $userInterface;
     }
 
+
     public function home(){
         echo $this->templates->render("auth/home");
     }
 
 
     public function login(){
-        $body = $this->request->getParsedBody();
-        $email = $body["email"];
-        $password = $body["password"];
+        $email = $this->requestBody["email"];
+        $password = $this->requestBody["password"];
         // var_dump(" email : ".$username);
         // var_dump("password : {$password}");
         //var_dump($body);

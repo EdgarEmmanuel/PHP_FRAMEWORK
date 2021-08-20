@@ -27,7 +27,7 @@ class Container {
 
         $dependencies = $this->load();
         $this->containerBuilder->addDefinitions($dependencies);
-
+        $this->containerBuilder->useAutowiring(true);
         return $this->containerBuilder->build();
     }
 
