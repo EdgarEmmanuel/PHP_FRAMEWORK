@@ -3,17 +3,14 @@
 namespace App\Config\Container;
 
 use function DI\create;
-use SuperBlog\Model\ArticleRepository;
-use SuperBlog\Persistence\InMemoryArticleRepository;
-use Twig\Environment;
-use Twig\Loader\FilesystemLoader;
 use DI\ContainerBuilder;
-use League\Plates\Engine;
+use App\Dependency\Dependency;
 
 class Container {
     /**
      * PHP/DI
      * https://php-di.org/doc/container.html
+     * https://github.com/PHP-DI/demo
      */
 
     private $containerBuilder;
@@ -32,21 +29,11 @@ class Container {
         $this->containerBuilder->addDefinitions($dependencies);
 
         return $this->containerBuilder->build();
-
     }
 
 
     public function load(){
-        return [
-            // Bind an interface to an implementation
-            //ArticleRepository::class => create(InMemoryArticleRepository::class),
-        
-            // Configure Twig
-            // Engine::class => function () {
-            //     $templates = new Engine('../../../app/Views/templates/');
-            //     return $templates;
-            // },
-        ];
+       return  Dependency::getDependencies();
     }
 
 }

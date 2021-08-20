@@ -12,8 +12,8 @@
         <h2>Login</h2>
         <form action="index.php?page=login" method="post">
             <div class="inputBox">
-                <input type="text" name="username" required>
-                <label for="">Username</label>
+                <input type="email" name="email" required>
+                <label for="">Email</label>
             </div>
             <div class="inputBox">
                 <input type="password" name="password" required>

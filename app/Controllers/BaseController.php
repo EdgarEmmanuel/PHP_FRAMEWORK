@@ -13,11 +13,13 @@ class BaseController{
      * http://platesphp.com/getting-started/simple-example/
      */
     protected $templates;
+    
 
     /**
      * https://docs.laminas.dev/laminas-diactoros/v2/usage/
      */
     protected $request;
+
 
     public function __construct() {
         $this->request = ServerRequestFactory::fromGlobals(
