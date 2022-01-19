@@ -9,6 +9,7 @@
     "autoload": {
         "psr-4": {
             "Framework\\": "src/Framework",
+            "App\\": "src/",
             "Tests\\Framework\\": "tests/Framework"
         }
     },
@@ -22,6 +23,7 @@
     "require": {
         "guzzlehttp/psr7": "^2.1",
         "http-interop/response-sender": "^1.0",
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "zendframework/zend-expressive-fastroute": "^0.3.0"
     }
 }

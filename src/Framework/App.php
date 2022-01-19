@@ -12,6 +12,7 @@
  */
 namespace Framework;
 
+use Framework\Routes\Router;
 use GuzzleHttp\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -26,6 +27,18 @@ use Psr\Http\Message\ServerRequestInterface;
  */
 class App
 {
+    private $modules = [];
+
+    /**
+     * @param array $modules
+     */
+    public function __construct(array $modules = []){
+        $router = new Router();
+
+        foreach($modules as $module){
+            $this->modules[] = new $module($router);
+        }
+    }
     /**
      * The main Function that handles the Request and The Response
      *
