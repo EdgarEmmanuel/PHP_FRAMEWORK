@@ -30,13 +30,19 @@ class App
     private $modules = [];
 
     /**
+     * @var Router
+     */
+    private $router;
+
+    /**
      * @param array $modules
      */
-    public function __construct(array $modules = []){
-        $router = new Router();
+    public function __construct(array $modules = [])
+    {
+        $this->router = new Router();
 
         foreach($modules as $module){
-            $this->modules[] = new $module($router);
+            $this->modules[] = new $module($this->router);
         }
     }
     /**
@@ -57,13 +63,43 @@ class App
                 return $response;
             }
 
-            if ($uri == "/blog") {
-                $response = new Response(200, [], '<h1>Blog<h1>');
+            $route = $this->router->match($request);
+
+            if(is_null($route)) {
+                $response = new Response(404, [], '<h1>Not Found<h1>');
                 return $response;
             }
 
-            $response = new Response(404, [], '<h1>Not Found<h1>');
-            return $response;
+            $params = $route->getParameters();
+
+            $request = array_reduce(
+                array_keys($params), function ($request, $key) use ($params) {
+                    return $request->withAttribute($key, $params[$key]);
+                }, $request
+            );
+
+
+            $response = call_user_func_array($route->getCallback(), [$request]);
+
+            if(is_string($response)) {
+                return new Response(200, [], $response);
+            }
+
+            if($response instanceof ResponseInterface) {
+                return $response;
+            }
+
+            throw new \Exception(["Impossible de traiter cela"]);
+
+
+
+            //            if ($uri == "/blog") {
+            //                $response = new Response(200, [], '<h1>Blog<h1>');
+            //                return $response;
+            //            }
+            //
+            //            $response = new Response(404, [], '<h1>Not Found<h1>');
+            //            return $response;
         }
 
         $response = new Response(404, [], '<h1>Not Found<h1>');

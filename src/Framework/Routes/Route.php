@@ -3,7 +3,8 @@
 namespace Framework\Routes;
 
 
-class Route {
+class Route
+{
 
     private $routeName;
 
@@ -36,11 +37,12 @@ class Route {
 
     /**
      * Get The URL parameters
+     *
      * @return array
      */
     public function getParameters(): array
     {
-       return $this->parameters;
+        return $this->parameters;
     }
 
 }

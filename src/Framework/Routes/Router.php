@@ -7,20 +7,22 @@ use Psr\Http\Message\ServerRequestInterface;
 use Zend\Expressive\Router\FastRouteRouter;
 use \Zend\Expressive\Router\Route as ZendRoute;
 
-class Router{
+class Router
+{
 
 
     private $router;
 
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->router = new FastRouteRouter();
     }
 
     /**
-     * @param string $path
-     * @param callable $function
-     * @param string $routeName
+     * @param  string   $path
+     * @param  callable $function
+     * @param  string   $routeName
      * @return void
      */
     public function get(string $path, callable $function, string $routeName)
@@ -29,13 +31,13 @@ class Router{
     }
 
     /**
-     * @param ServerRequestInterface $request
+     * @param  ServerRequestInterface $request
      * @return Route
      */
     public function match(ServerRequestInterface $request): ?Route
     {
         $resultRoute = $this->router->match($request);
-        if(!$resultRoute->isFailure()){
+        if(!$resultRoute->isFailure()) {
             return new Route(
                 $resultRoute->getMatchedRouteName(),
                 $resultRoute->getMatchedMiddleware(),
@@ -46,13 +48,13 @@ class Router{
     }
 
     /**
-     * @param string $routeName
-     * @param array $parameters
+     * @param  string $routeName
+     * @param  array  $parameters
      * @return string
      */
     public function generateURI(string $routeName, array $parameters): string
     {
-       return $this->router->generateUri($routeName, $parameters);
+        return $this->router->generateUri($routeName, $parameters);
     }
 
 }
