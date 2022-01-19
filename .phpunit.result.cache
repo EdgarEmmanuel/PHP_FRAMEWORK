@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"Tests\\Framework\\AppTest::testAssertTrailingTest":0.004,"Tests\\Framework\\AppTest::testBlogPageContent":0.001,"Tests\\Framework\\AppTest::testPageNotFound":0}}

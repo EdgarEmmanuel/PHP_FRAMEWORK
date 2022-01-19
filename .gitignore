@@ -1,2 +1,4 @@
 /vendor/
 custom_ruleset.xml
+.idea
+composer.lock
