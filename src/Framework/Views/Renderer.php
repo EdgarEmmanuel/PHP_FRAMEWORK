@@ -30,7 +30,8 @@ class Renderer
     private $globals = [];
 
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->ROOT = str_replace('public', '', $_SERVER['DOCUMENT_ROOT']);
     }
 
@@ -39,8 +40,8 @@ class Renderer
      * permits to add namespace for our view
      * so we can match the perfect path to the view
      *
-     * @param string $namespace
-     * @param string|null $pathName
+     * @param  string      $namespace
+     * @param  string|null $pathName
      * @return void
      */
     public function addPath(string $namespace, ?string $pathName = null): void
@@ -55,17 +56,18 @@ class Renderer
     /**
      * To add a global value to the view
      *
-     * @param string $key
-     * @param $value
+     * @param  string $key
+     * @param  $value
      * @return void
      */
-    public function addGlobal(string $key, $value){
+    public function addGlobal(string $key, $value)
+    {
         $this->globals[$key] = $value;
     }
 
     /**
-     * @param string $view
-     * @param array $parameters
+     * @param  string $view
+     * @param  array  $parameters
      * @return string
      */
     public function render(string $view, array $parameters = []): string
@@ -81,8 +83,8 @@ class Renderer
     }
 
     /**
-     * @param string $path
-     * @param array $parameters
+     * @param  string $path
+     * @param  array  $parameters
      * @return string
      */
     private function displayView(string $path, array $parameters): string
@@ -91,7 +93,7 @@ class Renderer
         $renderer = $this;
         extract($this->globals);
         extract($parameters);
-        require($path);
+        include $path;
         return ob_get_clean();
     }
 
@@ -99,16 +101,18 @@ class Renderer
      * it starts at the Root of the project so
      * you can personalize to path to your header in the view
      *
-     * @param string $path
+     * @param  string $path
      * @return void
      */
-    private function withHeader(string $path): void{
-        require_once($this->ROOT.$path);
+    private function withHeader(string $path): void
+    {
+        include_once $this->ROOT.$path;
     }
 
 
-    private function withFooter(string $path): void{
-        require_once($this->ROOT.$path);
+    private function withFooter(string $path): void
+    {
+        include_once $this->ROOT.$path;
     }
 
 
