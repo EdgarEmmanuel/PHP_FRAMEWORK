@@ -21,10 +21,12 @@ class AppTest extends TestCase {
     public function testBlogPageContent(){
         $app = new App([
             BlogModule::class
+        ],[
+            'renderer' => new \Framework\Views\Renderer()
         ]);
         $request = new ServerRequest("GET","/blog");
         $response = $app->run($request);
-        $this->assertStringContainsString('<h1>Blog<h1>',(string)$response->getBody());
+        $this->assertStringContainsString('<h1>WELCOME HERE</h1>',(string)$response->getBody());
         $this->assertEquals(200, $response->getStatusCode());
     }
 
@@ -32,6 +34,8 @@ class AppTest extends TestCase {
     public function testBlogPageContentSingle(){
         $app = new App([
             BlogModule::class
+        ],[
+            'renderer' => new \Framework\Views\Renderer()
         ]);
         $request = new ServerRequest("GET","/blog/mon-article");
         $response = $app->run($request);

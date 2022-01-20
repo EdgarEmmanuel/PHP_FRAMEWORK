@@ -1,10 +1,17 @@
 <?php
-$data = str_replace('public', '', $_SERVER['DOCUMENT_ROOT']);
-require_once($data."src/Views/header.php");
+$renderer->withHeader("src/Views/header.php");
 ?>
 
 <h1>WELCOME HERE</h1>
 
+<ul>
+    <li>
+        <a href="<?= $router->generateURI('blog.show', ['slug' => 'edgar'])?>">
+            Article Edgar
+        </a>
+    </li>
+</ul>
+
 <?php
-require_once($data."src/Views/footer.php");
+$renderer->withFooter("src/Views/footer.php");
 ?>

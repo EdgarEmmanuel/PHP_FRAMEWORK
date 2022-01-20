@@ -5,6 +5,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Blog/BlogModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/BlogModule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/views/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/views/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/views/show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/App.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/Views/Renderer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Views/Renderer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Framework/AppTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Framework/AppTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Framework/RendererTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Framework/RendererTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +128,7 @@
       <workItem from="1640628531138" duration="1266000" />
       <workItem from="1640877372748" duration="1432000" />
       <workItem from="1642585481221" duration="18163000" />
-      <workItem from="1642633393211" duration="7307000" />
+      <workItem from="1642633393211" duration="11835000" />
     </task>
     <servers />
   </component>

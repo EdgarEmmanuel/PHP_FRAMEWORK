@@ -25,4 +25,23 @@ class RendererTest extends TestCase {
     }
 
 
+    public function testTheRenderingOfTheRightPathWithParameters()
+    {
+        $this->renderer->addPath("blog", __DIR__."/views");
+        $content = $this->renderer->render("@blog/demoParameter", [
+            'slug' => 'mon article'
+        ]);
+        $this->assertStringContainsString($content, 'mon article');
+    }
+
+
+    public function testTheRenderingOfTheRightPathWithGlobal()
+    {
+        $this->renderer->addGlobal('slug', 'mon article');
+        $this->renderer->addPath("blog", __DIR__."/views");
+        $content = $this->renderer->render("@blog/demoParameter");
+        $this->assertStringContainsString($content, 'mon article');
+    }
+
+
 }

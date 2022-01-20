@@ -1,5 +1,10 @@
-<?php //include header ?>
+<?php
+$renderer->withHeader("src/Views/header.php");
+?>
 
-    <h1>WELCOME HERE ON ARTICLE X</h1>
+    <h1>Bienvenue sur l'article <?= $slug ?></h1>'
 
-<?php //include footer ?>
+
+<?php
+$renderer->withFooter("src/Views/footer.php");
+?>

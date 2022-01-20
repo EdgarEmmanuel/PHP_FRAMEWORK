@@ -14,8 +14,10 @@ class BlogModule
      * @var Renderer
      */
     private $renderer;
-   public function __construct(Router $router){
-       $this->renderer = new Renderer();
+
+   public function __construct(Router $router, Renderer $renderer = null){
+       $this->renderer = $renderer;
+       $this->renderer->addPath('blog',__DIR__."/views");
 
        $router->get('/blog', [$this, 'index'], 'blog.index');
        $router->get('/blog/{slug:[a-z0-9\-]+}', [$this, 'show'], 'blog.show');
@@ -27,13 +29,14 @@ class BlogModule
      */
    public function index(Request $request): string
    {
-       $this->renderer->addPath('blog',__DIR__."/views");
        return $this->renderer->render("@blog/index");
    }
 
 
    public function show(Request $request): string
    {
-       return "<h1>Bienvenue sur l'article ".$request->getAttribute('slug').'</h1>';
+       return $this->renderer->render("@blog/show", [
+           'slug' => $request->getAttribute('slug')
+       ]);
    }
 }
