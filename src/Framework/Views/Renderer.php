@@ -2,7 +2,7 @@
 namespace Framework\Views;
 
 
-class Renderer
+class Renderer implements IRenderer
 {
     /**
      * @var string
@@ -60,7 +60,7 @@ class Renderer
      * @param  $value
      * @return void
      */
-    public function addGlobal(string $key, $value)
+    public function addGlobal(string $key, $value): void
     {
         $this->globals[$key] = $value;
     }

@@ -1,0 +1,13 @@
+{% extends "twig/header.html" %}
+
+{% block content %}
+    <h1>WELCOME HERE</h1>
+
+    <ul>
+        <li>
+            <a href="{{  router.generateURI('blog.show', {slug: 'edgar'}) }}">
+                Article Edgar
+            </a>
+        </li>
+    </ul>
+{% endblock %}

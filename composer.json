@@ -25,6 +25,7 @@
         "guzzlehttp/psr7": "^2.1",
         "http-interop/response-sender": "^1.0",
         "squizlabs/php_codesniffer": "*",
-        "zendframework/zend-expressive-fastroute": "^0.3.0"
+        "zendframework/zend-expressive-fastroute": "^0.3.0",
+        "twig/twig": "^3.3"
     }
 }
