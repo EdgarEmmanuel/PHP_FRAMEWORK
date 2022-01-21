@@ -14,6 +14,7 @@ namespace Framework;
 
 use Framework\Routes\Router;
 use GuzzleHttp\Psr7\Response;
+use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 /**
@@ -30,23 +31,18 @@ class App
     private $modules = [];
 
     /**
-     * @var Router
+     * @var ContainerInterface
      */
-    private $router;
+    private $container;
 
     /**
      * @param array $modules
      */
-    public function __construct(array $modules = [], array $dependencies = [])
+    public function __construct(ContainerInterface $container, array $modules = [])
     {
-        $this->router = new Router();
-
-        if(array_key_exists('renderer', $dependencies)) {
-            $dependencies['renderer']->addGlobal('router', $this->router);
-        }
-
+        $this->container = $container;
         foreach($modules as $module){
-            $this->modules[] = new $module($this->router, $dependencies['renderer'] ?? null);
+            $this->modules[] = $container->get($module);
         }
     }
     /**
@@ -67,7 +63,7 @@ class App
                 return $response;
             }
 
-            $route = $this->router->match($request);
+            $route = $this->container->get(Router::class)->match($request);
 
             if(is_null($route)) {
                 $response = new Response(404, [], '<h1>Not Found<h1>');
@@ -94,19 +90,13 @@ class App
             }
 
             throw new \Exception(["Impossible de traiter cela"]);
-
-
-
-            //            if ($uri == "/blog") {
-            //                $response = new Response(200, [], '<h1>Blog<h1>');
-            //                return $response;
-            //            }
-            //
-            //            $response = new Response(404, [], '<h1>Not Found<h1>');
-            //            return $response;
         }
 
         $response = new Response(404, [], '<h1>Not Found<h1>');
         return $response;
+    }
+
+    public function getContainer(): ContainerInterface{
+        return $this->container;
     }
 }

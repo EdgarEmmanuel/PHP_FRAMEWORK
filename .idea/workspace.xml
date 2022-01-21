@@ -5,13 +5,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/my_php_framework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_php_framework.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Blog/BlogModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/BlogModule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/views/twig/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/views/twig/index.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Views/Renderer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Views/Renderer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/App.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/Views/TwigRenderer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Views/TwigRenderer.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +85,29 @@
       <path value="$PROJECT_DIR$/vendor/http-interop/response-sender" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/php-di/phpdoc-reader" />
+      <path value="$PROJECT_DIR$/vendor/php-di/invoker" />
+      <path value="$PROJECT_DIR$/vendor/php-di/php-di" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/cakephp/utility" />
+      <path value="$PROJECT_DIR$/vendor/cakephp/datasource" />
+      <path value="$PROJECT_DIR$/vendor/cakephp/core" />
+      <path value="$PROJECT_DIR$/vendor/cakephp/database" />
+      <path value="$PROJECT_DIR$/vendor/robmorgan/phinx" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
     </include_path>
   </component>
   <component name="ProjectId" id="22sa0xAj0YqDn5XwOFkJhVWI5xD" />
@@ -102,6 +126,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Blog" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
@@ -131,7 +156,7 @@
       <workItem from="1640628531138" duration="1266000" />
       <workItem from="1640877372748" duration="1432000" />
       <workItem from="1642585481221" duration="18163000" />
-      <workItem from="1642633393211" duration="19561000" />
+      <workItem from="1642633393211" duration="34193000" />
     </task>
     <servers />
   </component>

@@ -1,19 +1,26 @@
 <?php
 
-require '../vendor/autoload.php';
+require dirname(__DIR__) . '/vendor/autoload.php';
 
-$FULL_PATH = dirname(__DIR__)."/src/Views";
-$PHPRenderer = new \Framework\Views\Renderer();
-$TwigRenderer = new \Framework\Views\TwigRenderer($FULL_PATH);
-
-$app = new \Framework\App([
+//all modules
+$modules = [
     \App\Blog\BlogModule::class
-],[
-    'renderer' => $TwigRenderer
-]);
+];
 
+// database
+$databaseConfig = dirname(__DIR__).'/app/Config/DBConfig.php';
+
+// dependency injection container
+$builder = new \DI\ContainerBuilder();
+$builder->addDefinitions($databaseConfig);
+$builder->addDefinitions(dirname(__DIR__).'/app/Config/Config.php');
+$container = $builder->build();
+
+
+$app = new \Framework\App($container,$modules);
+
+
+// requests and responses
 $REQUEST = \GuzzleHttp\Psr7\ServerRequest::fromGlobals();
-
 $RESPONSE = $app->run($REQUEST);
-
 \Http\Response\send($RESPONSE);

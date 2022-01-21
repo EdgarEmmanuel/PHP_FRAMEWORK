@@ -3,6 +3,7 @@
 namespace App\Blog;
 
 
+use Framework\Config\Config;
 use Framework\Routes\Router;
 use Framework\Views\IRenderer;
 use Framework\Views\Renderer;
@@ -11,17 +12,18 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class BlogModule
 {
+
     /**
      * @var Renderer
      */
     private $renderer;
 
-   public function __construct(Router $router, IRenderer $renderer = null){
+   public function __construct(string $prefix, Router $router, IRenderer $renderer){
        $this->renderer = $renderer;
        $this->renderer->addPath('blog',__DIR__."/views/twig");
 
-       $router->get('/blog', [$this, 'index'], 'blog.index');
-       $router->get('/blog/{slug:[a-z0-9\-]+}', [$this, 'show'], 'blog.show');
+       $router->get($prefix, [$this, 'index'], 'blog.index');
+       $router->get($prefix.'/{slug:[a-z0-9\-]+}', [$this, 'show'], 'blog.show');
    }
 
     /**

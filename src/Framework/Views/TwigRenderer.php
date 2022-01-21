@@ -2,6 +2,8 @@
 
 namespace Framework\Views;
 
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 
 class TwigRenderer implements IRenderer{
 
@@ -11,10 +13,10 @@ class TwigRenderer implements IRenderer{
 
     private $extension;
 
-    public function __construct(string $fullPath, ?string $withExtension = '.twig'){
-        $this->loader =new \Twig\Loader\FilesystemLoader($fullPath);
+    public function __construct(FilesystemLoader $loader, Environment $twig, ?string $withExtension = '.twig'){
+        $this->loader = $loader;
         $this->extension = $withExtension;
-        $this->twig = new \Twig\Environment($this->loader, []);
+        $this->twig = $twig;
     }
 
     public function addPath(string $namespace, string $value)
