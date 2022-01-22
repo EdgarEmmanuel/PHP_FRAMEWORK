@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5b87821-471b-4e52-b5bb-5217127961a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/my_php_framework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_php_framework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Blog/BlogModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/BlogModule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Blog/views/twig/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/views/twig/index.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Config/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config/DBConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Config/DBConfig.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phinx.php" beforeDir="false" afterPath="$PROJECT_DIR$/phinx.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/App.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Views/TwigRenderer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Views/TwigRenderer.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,12 +116,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Blog" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Blog" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Blog/Config" />
       <recent name="$PROJECT_DIR$/app/Blog" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
@@ -156,7 +156,7 @@
       <workItem from="1640628531138" duration="1266000" />
       <workItem from="1640877372748" duration="1432000" />
       <workItem from="1642585481221" duration="18163000" />
-      <workItem from="1642633393211" duration="34193000" />
+      <workItem from="1642633393211" duration="37386000" />
     </task>
     <servers />
   </component>

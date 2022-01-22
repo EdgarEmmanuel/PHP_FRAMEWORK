@@ -14,8 +14,6 @@ return [
         $dat = str_replace('public', '', $_SERVER['DOCUMENT_ROOT']);
         return $dat."src/Views";
     },
-    'blog.prefix' => '/blog',
-    BlogModule::class => Factory(\App\Blog\Factory\BlogModuleFactory::class),
     Router::class => create(),
     RouterTwigExtension::class => function (\Psr\Container\ContainerInterface $container){
       $router = $container->get(Router::class);

@@ -3,11 +3,17 @@
 require 'public/index.php';
 
 $container = $app->getContainer();
+$migrations = [];
+foreach ($modules as $module){
+    $migrations[] = $module::MIGRATIONS;
+}
+
+$DEFAULT_PATH = '%%PHINX_CONFIG_DIR%%/database/migrations';
 
 return
 [
     'paths' => [
-        'migrations' => '%%PHINX_CONFIG_DIR%%/database/migrations',
+        'migrations' => $migrations,
         'seeds' => '%%PHINX_CONFIG_DIR%%/database/seeds'
     ],
     'environments' => [

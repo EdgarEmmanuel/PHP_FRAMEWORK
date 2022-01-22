@@ -5,6 +5,7 @@ use function DI\{create,get};
 
 return [
  'blog.prefix' => '/blog',
-    BlogModule::class => create(BlogModule::class)
-        ->property('prefix', get('blog.prefix'))
+    BlogModule::class => DI\Factory(\App\Blog\Factory\BlogModuleFactory::class),
+//    BlogModule::class => create(BlogModule::class)
+//        ->property('prefix', get('blog.prefix'))
 ];

@@ -3,15 +3,30 @@
 namespace App\Blog;
 
 
-use Framework\Config\Config;
+use Framework\Module\Module;
 use Framework\Routes\Router;
 use Framework\Views\IRenderer;
 use Framework\Views\Renderer;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class BlogModule
+class BlogModule extends Module
 {
+
+    /**
+     * @var array
+     */
+    const DEFINITIONS = __DIR__. '/Config/Config.php';
+
+    /**
+     * @var string|array
+     */
+    const MIGRATIONS = __DIR__ . '/database/migrations';
+
+    /**
+     * @var array
+     */
+    const DB_CONFIG = __DIR__. '/Config/DBConfig.php';
 
     /**
      * @var Renderer
