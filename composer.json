@@ -28,6 +28,7 @@
         "zendframework/zend-expressive-fastroute": "^0.3.0",
         "twig/twig": "^3.3",
         "php-di/php-di": "^6.3",
-        "robmorgan/phinx": "^0.12.9"
+        "robmorgan/phinx": "^0.12.9",
+        "symfony/console": "5.4.2"
     }
 }

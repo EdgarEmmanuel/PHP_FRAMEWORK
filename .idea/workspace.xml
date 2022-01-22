@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a5b87821-471b-4e52-b5bb-5217127961a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Blog/BlogModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/BlogModule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Blog/Config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Config/Config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phinx.php" beforeDir="false" afterPath="$PROJECT_DIR$/phinx.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Module/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Module/Module.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +154,7 @@
       <workItem from="1640628531138" duration="1266000" />
       <workItem from="1640877372748" duration="1432000" />
       <workItem from="1642585481221" duration="18163000" />
-      <workItem from="1642633393211" duration="38382000" />
+      <workItem from="1642633393211" duration="40194000" />
     </task>
     <servers />
   </component>

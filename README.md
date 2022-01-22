@@ -17,8 +17,10 @@ ___
 ### INJECTION DE DEPENDANCE
 [PSR11- PHP DI](https://github.com/PHP-DI/PHP-DI)
 
-
 ### BASE DE DONNEES ET MIGRATIONS ET SEED
 [PHINX](https://phinx.org/)
+
+### LIGNE DE COMMANDE
+[SYMFONY/CONSOLE](https://github.com/symfony/console)
 
 ![image](https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png)
