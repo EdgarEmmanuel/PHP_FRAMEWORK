@@ -19,9 +19,14 @@ class BlogModule extends Module
     const DEFINITIONS = __DIR__. '/Config/Config.php';
 
     /**
-     * @var string|array
+     * @var string
      */
     const MIGRATIONS = __DIR__ . '/database/migrations';
+
+    /**
+     * @var string
+     */
+    const SEEDS = __DIR__ . '/database/seeds';
 
     /**
      * @var array

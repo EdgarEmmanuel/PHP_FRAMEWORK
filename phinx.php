@@ -3,18 +3,28 @@
 require 'public/index.php';
 
 $container = $app->getContainer();
+
+// for the migrations
 $migrations = [];
 foreach ($modules as $module){
     $migrations[] = $module::MIGRATIONS;
 }
 
-$DEFAULT_PATH = '%%PHINX_CONFIG_DIR%%/database/migrations';
+// for the seeds
+$seeds = [];
+foreach ($modules as $module){
+    $seeds[] = $module::SEEDS;
+}
+
+// DEFAULT PATHS
+$DEFAULT_PATH_MIGRATIONS = '%%PHINX_CONFIG_DIR%%/database/migrations';
+$DEFAULT_PATH_SEEDS = '%%PHINX_CONFIG_DIR%%/database/seeds';
 
 return
 [
     'paths' => [
         'migrations' => $migrations,
-        'seeds' => '%%PHINX_CONFIG_DIR%%/database/seeds'
+        'seeds' => $seeds
     ],
     'environments' => [
         'default_migration_table' => 'phinxlog',

@@ -1,11 +1,10 @@
 <?php
 
 use App\Blog\BlogModule;
-use function DI\{create,get};
+use function DI\{Factory};
+use App\Blog\Factory\BlogModuleFactory;
 
 return [
- 'blog.prefix' => '/blog',
-    BlogModule::class => DI\Factory(\App\Blog\Factory\BlogModuleFactory::class),
-//    BlogModule::class => create(BlogModule::class)
-//        ->property('prefix', get('blog.prefix'))
+    'blog.prefix' => '/blog',
+    BlogModule::class => Factory(BlogModuleFactory::class),
 ];

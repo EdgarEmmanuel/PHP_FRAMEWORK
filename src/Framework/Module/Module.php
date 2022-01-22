@@ -17,6 +17,11 @@ class Module{
     const MIGRATIONS = [];
 
     /**
+     * the variable specifying the path to the seeds for the module
+     */
+    const SEEDS = [];
+
+    /**
      * the variable for the database credentials
      */
     const DB_CONFIG = [
