@@ -4,9 +4,14 @@
 require __DIR__.'/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
+use Framework\Commands\Commands;
 
 $application = new Application();
 
-$application->add(new \Framework\Commands\MigrationCommand());
+$commands = Commands::getCommands();
+foreach ($commands as $command){
+    $application->add($command);
+}
+
 
 $application->run();

@@ -16,7 +16,7 @@ class MigrationCommand extends Command {
     protected function configure(): void
     {
         $this
-            ->setHelp('This Show Galsen Dev')
+            ->setHelp('This is for generating a new migration')
             ->addArgument('migrationName', InputArgument::REQUIRED, 'The migration name.');
     }
 
