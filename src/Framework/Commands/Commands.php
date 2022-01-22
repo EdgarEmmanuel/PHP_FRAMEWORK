@@ -6,7 +6,8 @@ class Commands{
     public static function getCommands()
     {
         return [
-            new \Framework\Commands\MigrationCommand()
+            new MigrationCommand(),
+            new RunCommand()
         ];
     }
 }
