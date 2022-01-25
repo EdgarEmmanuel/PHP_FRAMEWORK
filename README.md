@@ -3,27 +3,30 @@
 ![image](https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png)
 ___
 
-### GESTION DES REQUETES ET REPONSE
+### HANDLING REQUESTS AND RESPONSES
 [PSR7 - Guzzle HTTP](https://packagist.org/packages/twig/twig)
 
 
-### GESTION D'ENVOIE DES REPONSES
+### HANDLING SENDING RESPONSES
 [Response Sender](https://packagist.org/packages/http-interop/response-sender)
 
-### GESTION DES ROUTES ET DU ROUTING
+### HANDLING ROUTING
 [ZendExpressiveFastRoute](https://packagist.org/packages/zendframework/zend-expressive-fastroute)
 
-### GESTION DES VUES/TEMPLATES
+### HANDLING VIEWS/TEMPLATES
 [Twig](https://packagist.org/packages/twig/twig)
 
-### INJECTION DE DEPENDANCE
+### DEPENDENCY INJECTION
 [PSR11- PHP DI](https://github.com/PHP-DI/PHP-DI)
 
-### BASE DE DONNEES ET MIGRATIONS ET SEED
+### DATABASES AND  MIGRATIONS AND SEEDS
 [PHINX](https://phinx.org/)
 
-### LIGNE DE COMMANDE
+### COMMAND LINE
 [SYMFONY/CONSOLE](https://github.com/symfony/console)
+
+### GENERATE FAKE DATA
+[FAKER](https://github.com/FakerPHP/Faker)
 
 ___
 

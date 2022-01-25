@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5b87821-471b-4e52-b5bb-5217127961a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/my_php_framework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_php_framework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Commands/Commands.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Commands/Commands.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +117,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
     </include_path>
   </component>
   <component name="ProjectId" id="22sa0xAj0YqDn5XwOFkJhVWI5xD" />
@@ -167,7 +171,7 @@
       <workItem from="1640877372748" duration="1432000" />
       <workItem from="1642585481221" duration="18163000" />
       <workItem from="1642633393211" duration="42188000" />
-      <workItem from="1643120902248" duration="5765000" />
+      <workItem from="1643120902248" duration="7360000" />
     </task>
     <servers />
   </component>
