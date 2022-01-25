@@ -8,7 +8,9 @@ class Commands{
         return [
             new MigrationCommand(),
             new RunCommand(),
-            new RunAllMigrationCommand()
+            new RunAllMigrationCommand(),
+            new MakeSeedCommand(),
+            new RunAllSeed()
         ];
     }
 }

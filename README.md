@@ -1,4 +1,6 @@
 # THE PHP FRAMEWORK 
+
+![image](https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png)
 ___
 
 ### GESTION DES REQUETES ET REPONSE
@@ -23,4 +25,18 @@ ___
 ### LIGNE DE COMMANDE
 [SYMFONY/CONSOLE](https://github.com/symfony/console)
 
-![image](https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png)
+___
+
+### Commands
+
+1. Make migration => php builder builder:migration <MigrationName>
+N.B: CamelCase for the name
+
+2. Run All Migrations => php builder builder:migrate
+
+3. Make a Seeder => php builder builder:seed <SeedName>
+N.B: CamelCase for the name 
+
+4. Run All Seeder => php builder builder:run:seed
+
+5. Run server => php builder run
