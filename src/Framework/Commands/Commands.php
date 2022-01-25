@@ -7,7 +7,8 @@ class Commands{
     {
         return [
             new MigrationCommand(),
-            new RunCommand()
+            new RunCommand(),
+            new RunAllMigrationCommand()
         ];
     }
 }
