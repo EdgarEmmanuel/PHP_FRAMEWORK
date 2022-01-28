@@ -9,5 +9,12 @@
                 Article Edgar
             </a>
         </li>
+        {% for post in posts %}
+            <li>
+                <a href="{{ path('blog.show', {slug: post.slug, id:post.id}) }}">
+                    {{ post.name }}
+                </a>
+            </li>
+        {% endfor %}
     </ul>
 {% endblock %}
