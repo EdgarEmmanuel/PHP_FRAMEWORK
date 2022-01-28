@@ -11,15 +11,19 @@ use function DI\Factory;
 return [
     'views.path' => function(){
         $FULL_PATH = dirname(__DIR__)."/src/Views";
-        $dat = str_replace('public', '', $_SERVER['DOCUMENT_ROOT']);
-        return $dat."src/Views";
+        $PATH = str_replace('public', '', $_SERVER['DOCUMENT_ROOT']);
+        return $PATH."src/Views";
     },
+
     Router::class => create(),
+
     RouterTwigExtension::class => function (\Psr\Container\ContainerInterface $container){
       $router = $container->get(Router::class);
       return new RouterTwigExtension($router);
     },
+
     IRenderer::class => Factory(TwigRendererFactory::class),
+
     \PDO::class => function (\Psr\Container\ContainerInterface $container){
         $host = $container->get('database.host');
         $database = $container->get('database.name');
