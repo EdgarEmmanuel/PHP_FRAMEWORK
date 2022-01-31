@@ -2,5 +2,9 @@
 
 
 {% block content %}
-    <h1>Bienvenue sur l'article {{ slug }}</h1>
+    <h1>{{ post.slug }}</h1>
+    <h4>{{ post.name }}</h4>
+    <p>
+        {{ post.content | nl2br }}
+    </p>
 {% endblock %}

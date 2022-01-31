@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5b87821-471b-4e52-b5bb-5217127961a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/BlogModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/BlogModule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Config/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Factory/BlogModuleFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Factory/BlogModuleFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/views/twig/show.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/views/twig/show.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +172,8 @@
       <workItem from="1642633393211" duration="42188000" />
       <workItem from="1643120902248" duration="10945000" />
       <workItem from="1643362743856" duration="2642000" />
+      <workItem from="1643376187172" duration="1302000" />
+      <workItem from="1643627746431" duration="4104000" />
     </task>
     <servers />
   </component>

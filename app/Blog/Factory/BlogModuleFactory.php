@@ -4,6 +4,7 @@ namespace App\Blog\Factory;
 
 
 use App\Blog\BlogModule;
+use App\Blog\Interfaces\IPost;
 use Framework\Routes\Router;
 use Framework\Views\IRenderer;
 use Psr\Container\ContainerInterface;
@@ -17,7 +18,7 @@ class BlogModuleFactory{
         $router = $container->get(Router::class);
         $renderer = $container->get(IRenderer::class);
         $prefix = $container->get('blog.prefix');
-        $pdo = $container->get(\PDO::class);
-        return new BlogModule($prefix,$router,$renderer, $pdo);
+        $post = $container->get(IPost::class);
+        return new BlogModule($prefix,$router,$renderer, $post);
     }
 }
