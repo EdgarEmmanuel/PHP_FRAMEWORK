@@ -56,12 +56,16 @@ class App
     {
         $uri = $request->getUri()->getPath();
 
+        
+
         if (!empty($uri)) {
-            if ($uri[-1] == "/") {
-                $response = (new Response())
-                    ->withStatus(301);
-                return $response;
-            }
+        //     if ($uri[-1] == "/") {
+        //         var_dump($uri);
+        // die;
+        //         $response = (new Response())
+        //             ->withStatus(301);
+        //         return $response;
+        //     }
 
             $route = $this->container->get(Router::class)->match($request);
 

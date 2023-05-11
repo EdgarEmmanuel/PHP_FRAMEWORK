@@ -1,6 +1,5 @@
 <?php
 
-use App\Blog\BlogModule;
 use Framework\Routes\Router;
 use Framework\Views\Extension\RouterTwigExtension;
 use Framework\Views\Factory\TwigRendererFactory;
@@ -10,7 +9,6 @@ use function DI\Factory;
 
 return [
     'views.path' => function () {
-        $FULL_PATH = dirname(__DIR__)."/src/Views";
         $PATH = str_replace('public', '', $_SERVER['DOCUMENT_ROOT']);
         return $PATH."src/Views";
     },
