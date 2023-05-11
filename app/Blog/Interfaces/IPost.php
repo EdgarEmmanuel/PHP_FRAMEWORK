@@ -2,7 +2,8 @@
 namespace App\Blog\Interfaces;
 
 
-interface IPost{
+interface IPost
+{
     public function getOnePost(int $id);
     public function getAllPosts();
 }

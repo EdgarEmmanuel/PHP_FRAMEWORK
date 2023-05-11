@@ -54,47 +54,50 @@ class BlogModule extends Module
      */
     private $router;
 
-   public function __construct(string $prefix, Router $router, IRenderer $renderer, IPost $IPost){
+    public function __construct(string $prefix, Router $router, IRenderer $renderer, IPost $IPost)
+    {
 
-       // for the database pdo
-       $this->IPost = $IPost;
+        // for the database pdo
+        $this->IPost = $IPost;
 
-       // for the views
-       $this->renderer = $renderer;
-       $this->renderer->addPath('blog',__DIR__."/views/twig");
+        // for the views
+        $this->renderer = $renderer;
+        $this->renderer->addPath('blog', __DIR__."/views/twig");
 
-       // for the routes
-       $this->router = $router;
-       $this->router->get($prefix, [$this, 'index'], 'blog.index');
-       $this->router->get($prefix.'/{slug:[a-z0-9\-]+}-{id:[0-9]+}', [$this, 'show'], 'blog.show');
-   }
+        // for the routes
+        $this->router = $router;
+        $this->router->get($prefix, [$this, 'index'], 'blog.index');
+        $this->router->get($prefix.'/{slug:[a-z0-9\-]+}-{id:[0-9]+}', [$this, 'show'], 'blog.show');
+    }
 
     /**
-     * @param Request $request
+     * @param  Request $request
      * @return string
      */
-   public function index(Request $request): string
-   {
-       $posts = $this->IPost->getAllPosts();
+    public function index(Request $request): string
+    {
+        $posts = $this->IPost->getAllPosts();
 
-       return $this->renderer->render("@blog/index", compact("posts",$posts));
-   }
-
-
-   public function show(Request $request)
-   {
-       $slug = $request->getAttribute('slug') ? $request->getAttribute('slug') : '';
-       $id = $request->getAttribute('id') ? $request->getAttribute('id') : 0;
+        return $this->renderer->render("@blog/index", compact("posts", $posts));
+    }
 
 
-       $post = $this->IPost->getOnePost($id);
+    public function show(Request $request)
+    {
+        $slug = $request->getAttribute('slug') ? $request->getAttribute('slug') : '';
+        $id = $request->getAttribute('id') ? $request->getAttribute('id') : 0;
 
-       if($post->slug !== $slug){
-           return $this->redirect("blog.show",[
-               "slug" => $post->slug, "id" => $post->id
-           ]);
-       }
 
-       return $this->renderer->render("@blog/show", compact("post",$post));
-   }
+        $post = $this->IPost->getOnePost($id);
+
+        if($post->slug !== $slug) {
+            return $this->redirect(
+                "blog.show", [
+                "slug" => $post->slug, "id" => $post->id
+                ]
+            );
+        }
+
+        return $this->renderer->render("@blog/show", compact("post", $post));
+    }
 }

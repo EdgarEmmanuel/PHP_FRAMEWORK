@@ -11,7 +11,7 @@ class RunCommand extends Command{
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        exec('php -S localhost:9000 -t public/');
+        exec('php -S localhost:3000 -t public/');
         //$output->writeln($data);
         return Command::SUCCESS;
 

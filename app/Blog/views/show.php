@@ -1,6 +1,6 @@
 <?php $renderer->withHeader("src/Views/header.php"); ?>
 
-    <h1>Bienvenue sur l'article <?= $slug ?></h1>'
+    <h1>Bienvenue sur l'article <?php echo $slug ?></h1>'
 
 
 <?php

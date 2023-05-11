@@ -5,14 +5,16 @@ namespace App\Blog\Models;
 use App\Blog\Interfaces\IPost;
 use PDO;
 
-class Post implements IPost {
+class Post implements IPost
+{
 
     /**
      * @var PDO
      */
     private $pdo;
 
-    public function __construct(PDO $pdo){
+    public function __construct(PDO $pdo)
+    {
         $this->pdo = $pdo;
     }
 
@@ -29,7 +31,7 @@ class Post implements IPost {
     /**
      * return one post by id
      *
-     * @param int $id
+     * @param  int $id
      * @return \stdClass
      */
     public function getOnePost(int $id): \stdClass

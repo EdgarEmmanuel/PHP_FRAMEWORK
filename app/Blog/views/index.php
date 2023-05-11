@@ -6,7 +6,7 @@ $renderer->withHeader("src/Views/header.php");
 
 <ul>
     <li>
-        <a href="<?= $router->generateURI('blog.show', ['slug' => 'edgar'])?>">
+        <a href="<?php echo $router->generateURI('blog.show', ['slug' => 'edgar'])?>">
             Article Edgar
         </a>
     </li>

@@ -6,6 +6,10 @@
             "email": "mmnledgar@gmail.com"
         }
     ],
+    "config": {
+
+        "platform-check": false
+    },
     "autoload": {
         "psr-4": {
             "Framework\\": "src/Framework",
