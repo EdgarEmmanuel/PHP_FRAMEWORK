@@ -19,6 +19,12 @@ class TwigRenderer implements IRenderer{
         $this->twig = $twig;
     }
 
+
+    public function setLoaderPath(string $path)
+    {
+        $this->loader->setPaths($path);
+    }
+
     public function addPath(string $namespace, string $value)
     {
         $this->loader->addPath($value, $namespace);

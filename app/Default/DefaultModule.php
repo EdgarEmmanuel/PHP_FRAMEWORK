@@ -54,6 +54,8 @@ class DefaultModule extends Module
         // for the views
         $this->renderer = $renderer;
         $this->renderer->addPath('default', __DIR__."/views/twig");
+        $this->renderer->setLoaderPath(__DIR__."/views/twig");
+
 
         // for the routes
         $this->router = $router;

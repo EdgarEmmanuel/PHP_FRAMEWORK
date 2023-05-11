@@ -63,6 +63,7 @@ class BlogModule extends Module
         // for the views
         $this->renderer = $renderer;
         $this->renderer->addPath('blog', __DIR__."/views/twig");
+        $this->renderer->setLoaderPath(__DIR__."/views");
 
         // for the routes
         $this->router = $router;
